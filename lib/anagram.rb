@@ -23,15 +23,9 @@ class Anagram
     end 
 
     def match(array)
-        #=> ["cat", "dog", "elbow"]
-        #=> word = "odg"
-        matches = []
-        array.each do |word|
-            if word.split("").sort == @word.split("").sort
-                matches << word
-            end 
+        array.select do |word| 
+            word.split("").sort == @word.split("").sort
         end 
-        matches
     end 
 
 end 
