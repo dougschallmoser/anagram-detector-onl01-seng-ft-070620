@@ -13,19 +13,20 @@ require 'pry'
 #            word in the words array
 #       -If no matches exist, returns an empty array
 
+## REWORK
 
 class Anagram
 
-    attr_accessor :word
+    attr_accessor :word 
 
     def initialize(word)
         @word = word
     end 
 
     def match(array)
-        array.select do |word| 
-            word.split("").sort == @word.split("").sort
-        end 
-    end 
+        array.select do |choice|
+            choice.split("").sort == word.split("").sort 
+        end
+    end
 
 end 
